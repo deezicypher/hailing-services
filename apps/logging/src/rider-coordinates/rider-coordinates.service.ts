@@ -14,4 +14,12 @@ export class RiderCoordinatesService {
     async saveRiderCoordinate(createCoordinateDTO:CreateCoordinateDTO){
         return this.riderCoordinateModel.create(createCoordinateDTO)
     }
+
+    async getCoordinate(id:string){
+        return this.riderCoordinateModel.findById(id)
+    }
+
+    async getCoordinates(){
+        return this.riderCoordinateModel.find()
+    }
 }
