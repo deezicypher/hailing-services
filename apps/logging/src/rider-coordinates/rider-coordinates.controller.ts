@@ -15,10 +15,10 @@ export class RiderCoordinatesController {
 
     @Get(':id')
     getRiderCoordinate(
-        @Param('id')
-        id:string
+        @Param()
+        param:any
     ){
-        return this.coordinateService.getCoordinate(id)
+        return this.coordinateService.getCoordinate(param.id)
     }
 
     @Post()
